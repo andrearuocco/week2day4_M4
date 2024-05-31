@@ -19,3 +19,37 @@ h4{
     border-bottom-left-radius: 5px;
     background-color: blanchedalmond;
 }
+
+/*
+#hover{
+    display: none;
+}
+
+.container:hover #hover{
+    display: block;
+}
+
+.card:hover .box-shadow{
+    opacity: 0.3;
+    display: block;
+}
+
+button{
+    width: 40%;
+    height: 30px;
+    border-radius: 20px;
+    background-color: black;
+}
+*/
+
+.position-absolute{
+    top: 4rem;
+    background-color: blanchedalmond;
+    color: white;
+    margin-right: 25%;
+    margin-left: 25%;
+    border-radius: 20px;
+}
+
+
+
