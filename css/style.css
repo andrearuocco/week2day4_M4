@@ -1,0 +1,21 @@
+.card{
+    --bs-card-border-width: 0; 
+}
+
+.card-img-top{
+    height: 22rem;
+}
+
+h4{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.card-body{
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: blanchedalmond;
+}
