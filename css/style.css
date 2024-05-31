@@ -20,35 +20,40 @@ h4{
     background-color: blanchedalmond;
 }
 
-/*
-#hover{
-    display: none;
-}
-
-.container:hover #hover{
-    display: block;
-}
-
-.card:hover .box-shadow{
-    opacity: 0.3;
-    display: block;
-}
-
-button{
-    width: 40%;
-    height: 30px;
-    border-radius: 20px;
-    background-color: black;
-}
-*/
-
-.position-absolute{
+div.position-absolute{
     top: 4rem;
     background-color: blanchedalmond;
     color: white;
     margin-right: 25%;
     margin-left: 25%;
     border-radius: 20px;
+    opacity: 0;
+}
+
+p.position-absolute{
+    background-color: blanchedalmond;
+    color: black;
+    bottom: 8rem;
+    margin-right: 25%;
+    margin-left: 25%;
+    border-radius: 5px;
+    border: 2px solid white;
+    opacity: 0;
+}
+
+#hover{
+    position: absolute;
+    background: black;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+div.card:hover #hover{
+    opacity: 0.4;
+}
+
+div.card:hover div.position-absolute, div.card:hover p.position-absolute{
+    opacity: 1;
 }
 
 
