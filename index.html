@@ -9,7 +9,14 @@
     <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
-
+    <header class="container-fluid d-flex justify-content-between position-sticky sticky-top">
+        <h1 class="py-4" id="title">EPICBooks</h1>
+        <form class="row w-50 py-4" id="form">
+            <input id="searchBooks" class="col-7 me-2" value="" name="books" type="text" placeholder="searchBooks" />
+            <button type="button" class="col-4 me-1" value="Search" onclick="">CERCA</button>
+        </form>
+    </header>
+    
     <div class="container"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./script/script.js"></script>

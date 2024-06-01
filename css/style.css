@@ -56,5 +56,99 @@ div.card:hover div.position-absolute, div.card:hover p.position-absolute{
     opacity: 1;
 }
 
+.col-7{
+    width: 64.333333%;
+    border-radius: 20px;
+    font-family: 'Font Awesome 6 Brands';
+    font-size: 1.4rem;
+    background-color: blanchedalmond;
+    border: 2px solid white;
+    color: black;
+}
+
+.col-4{
+    border: 2px solid white;
+    color: black;
+    border-radius: 20px;
+    background-color: blanchedalmond;
+    font-family: 'Font Awesome 6 Brands';
+    font-size: x-large;
+}
+
+h1{
+    color: black;
+    font-family: cursive;
+}
+
+header{
+    background-image: url(../css/img/foto-pagine-libro-aperto.jpg);
+    background-size: contain;
+}
+
+@media (max-width: 1050px) and (min-width: 742px) {
+    .col-4{
+        width: 32.333333%;
+    }
+}
+
+@media (max-width: 742px) and (min-width: 690px) {
+    .col-4{
+        width: 31.333333%;
+    }
+}
+
+@media (max-width: 690px) {
+    .col-7{
+        font-size: medium;
+        margin-bottom: 2%;
+    }
+    .col-4{
+        font-size: medium;
+        margin-right: .5rem !important;
+    }
+    header .row{
+        flex-direction: column;
+        align-items: end;
+    }
+}
+
+@media (max-width: 505px) {
+    .col-4{
+        font-size: x-small;
+    }
+    .col-7{
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 375px) {
+    header .row{
+        align-items: start;
+    }
+    header{
+        flex-direction: column;
+    }
+    #title{
+        padding-bottom: 0rem !important;
+        margin-bottom: 0rem !important;
+    }
+    #form{
+        margin-top: 0rem !important;
+        padding-top: 0rem !important;
+        width: 100% !important;
+        padding-left: .5rem;
+    }
+    .col-7{
+        width: 100%;
+    }
+    .col-4{
+        padding-left: .5rem;
+        width: auto;
+    }
+}
+
+:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
 
 
