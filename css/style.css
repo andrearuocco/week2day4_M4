@@ -85,13 +85,13 @@ header{
     background-size: contain;
 }
 
-@media (max-width: 1050px) and (min-width: 742px) {
+@media (max-width: 1050px) and (min-width: 768px) {
     .col-4{
         width: 32.333333%;
     }
 }
 
-@media (max-width: 742px) and (min-width: 690px) {
+@media (max-width: 768px) and (min-width: 690px) {
     .col-4{
         width: 31.333333%;
     }
