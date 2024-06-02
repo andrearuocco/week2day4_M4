@@ -1,7 +1,7 @@
 function call() {
     fetch('https://striveschool-api.herokuapp.com/books').then(resp => {
         resp.json().then(data => {
-            const CONTAINER = document.querySelector(".container")
+            const CONTAINER = document.querySelector("div.container")
             const ROW = document.createElement("div")
             ROW.classList.add("row")
             data.forEach((element, i) => {
@@ -23,12 +23,12 @@ function call() {
                 DIV.appendChild(HEADING)
                 const PARAG = document.createElement("p")
                 PARAG.classList.add("card-text")
-                PARAG.innerText = "€ " + element.price
+                PARAG.innerText = "€" + element.price
                 DIV.appendChild(PARAG)
 
                 const HOVER = document.createElement("div")
                 HOVER.className = "position-absolute w-50"
-                HOVER.innerHTML += "<button class='w-100 btn' type='button'><i class='fa-brands fa-shopify'></i>  Aggiungi</button>"
+                HOVER.innerHTML += "<button class='w-100 btn' type='button' onclick='toBuy()'><i class='fa-brands fa-shopify'></i>  Aggiungi</button>"
                 const HOVERT = document.createElement("p")
                 HOVERT.className = "w-50 position-absolute p-1"
                 HOVERT.innerText = `${element.title}`
@@ -45,3 +45,39 @@ function call() {
     })
 }
 call()
+
+function toBuy() {
+    const HEADING = document.querySelectorAll("h4")
+    //console.log(HEADING)
+    const PARAG = document.querySelectorAll(".card-text")
+    //console.log(PARAG)
+    const DIV = document.createElement("div")
+    DIV.className = "d-flex flex-column"
+    const DIVT = document.createElement("div")
+    DIVT.className = "d-flex flex-column"
+    const ASIDE = document.createElement("aside")
+    ASIDE.className = "d-flex"
+    for(index of HEADING){
+        const PA = document.createElement("p")
+        PA.innerText = index.innerText
+        DIV.appendChild(PA)
+    }
+    for(index of PARAG){
+        const PA = document.createElement("p")
+        PA.innerText = index.innerText
+        DIVT.appendChild(PA)
+        
+    }
+    ASIDE.appendChild(DIV)
+    ASIDE.appendChild(DIVT)
+    const MAIN = document.querySelector("main")
+    MAIN.appendChild(ASIDE)
+}
+
+
+
+
+
+
+
+

@@ -6,7 +6,7 @@
     height: 22rem;
 }
 
-h4{
+h4, aside div:first-child p{
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -147,8 +147,17 @@ header{
     }
 }
 
-:focus-visible {
+:focus-visible{
     outline: -webkit-focus-ring-color auto 0px;
+}
+
+aside{
+    height: auto;
+    position: fixed;
+    width: 40%;
+    background-color: blanchedalmond;
+    top: 0;
+    right: 0;
 }
 
 
