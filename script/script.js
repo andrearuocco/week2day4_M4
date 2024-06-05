@@ -1,7 +1,7 @@
 function call() {
     fetch('https://striveschool-api.herokuapp.com/books').then(resp => {
         resp.json().then(data => {
-            const CONTAINER = document.querySelector("main.container")
+            const CONTAINER = document.querySelector("div.container")
             const ROW = document.createElement("div")
             ROW.classList.add("row")
             data.forEach((element, i) => {
@@ -28,8 +28,9 @@ function call() {
 
                 const HOVER = document.createElement("div")
                 HOVER.className = "position-absolute w-50"
-                HOVER.innerHTML += "<button class='w-100 btn' onclick='toBuy(\""+ element.title +"\")' type='button'><i class='fa-brands fa-shopify'></i>  Aggiungi</button>"
-                const HOVERT = document.createElement("p")
+                HOVER.innerHTML += "<button class='w-100 btn' onclick='toBuy(\""+ element.title +"\", \""+ element.price +"\")' type='button'><i class='fa-brands fa-shopify'></i>  Aggiungi</button>"
+                const HOVERT = document.createElement("a")
+                HOVERT.href = `./dettagli.html?=${element.asin}`
                 HOVERT.className = "w-50 position-absolute p-1"
                 HOVERT.innerText = `${element.title}`
 
@@ -46,8 +47,40 @@ function call() {
 }
 call()
 
-function toBuy(titolo) {
-    console.log(titolo)
+
+
+function toBuy(title, price) {
+    //console.log(price)
+
+
+    const BODY = document.querySelector("body")
+    BODY.className = "d-flex flex-row-reverse"
+    
+    const ASIDE = document.querySelector("aside")
+    ASIDE.classList.remove("d-none")
+    
+    const HEADER = document.querySelector("header")
+    HEADER.classList.remove("position-sticky")
+    HEADER.classList.remove("sticky-top")
+    
+    const UL = document.createElement("ul")
+    UL.className = "list-unstyled"
+    const LI = document.createElement("li")
+    LI.className = "d-flex justify-content-between"
+
+    
+    const HEADF = document.createElement("h5")
+    const PAF = document.createElement("h5")
+    PAF.classList.add("pe-2")
+    HEADF.innerText = `${title}`
+    PAF.innerText = `${price}`
+    
+    LI.appendChild(HEADF)
+    LI.appendChild(PAF)
+    UL.appendChild(LI) 
+    ASIDE.appendChild(UL)
+
+
     /*const HEADING = document.querySelectorAll("h4")
     //console.log(HEADING)
     const PARAG = document.querySelectorAll(".card-text")
