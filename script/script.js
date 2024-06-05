@@ -1,7 +1,7 @@
 function call() {
     fetch('https://striveschool-api.herokuapp.com/books').then(resp => {
         resp.json().then(data => {
-            const CONTAINER = document.querySelector("div.container")
+            const CONTAINER = document.querySelector("main.container")
             const ROW = document.createElement("div")
             ROW.classList.add("row")
             data.forEach((element, i) => {
@@ -28,7 +28,7 @@ function call() {
 
                 const HOVER = document.createElement("div")
                 HOVER.className = "position-absolute w-50"
-                HOVER.innerHTML += "<button class='w-100 btn' type='button' onclick='toBuy()'><i class='fa-brands fa-shopify'></i>  Aggiungi</button>"
+                HOVER.innerHTML += "<button class='w-100 btn' onclick='toBuy(\""+ element.title +"\")' type='button'><i class='fa-brands fa-shopify'></i>  Aggiungi</button>"
                 const HOVERT = document.createElement("p")
                 HOVERT.className = "w-50 position-absolute p-1"
                 HOVERT.innerText = `${element.title}`
@@ -46,8 +46,9 @@ function call() {
 }
 call()
 
-function toBuy() {
-    const HEADING = document.querySelectorAll("h4")
+function toBuy(titolo) {
+    console.log(titolo)
+    /*const HEADING = document.querySelectorAll("h4")
     //console.log(HEADING)
     const PARAG = document.querySelectorAll(".card-text")
     //console.log(PARAG)
@@ -72,7 +73,20 @@ function toBuy() {
     ASIDE.appendChild(DIVT)
     const MAIN = document.querySelector("main")
     MAIN.appendChild(ASIDE)
+    
+    const buttons = document.querySelectorAll('.btn');
+    console.log(buttons)
+    for (let i = 0; i < buttons.length; i++) {
+    //console.log(buttons[i])
+    buttons[i].addEventListener('click', () => {
+        alert(`ciao`);
+    });
 }
+    
+    
+    */
+}
+
 
 
 
