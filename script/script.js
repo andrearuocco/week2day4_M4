@@ -130,8 +130,15 @@ function toBuy(title, price) {
 }
 
 function trash() {
- const UL = document.querySelector('ul')
- UL.remove()
+    const buttons = document.querySelectorAll('aside button');
+
+  
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+         
+            button.parentElement.remove();
+        });
+    });
 }
 
 
