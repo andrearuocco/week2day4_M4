@@ -72,9 +72,18 @@ function toBuy(title, price) {
     const HEADF = document.createElement("h5")
     const PAF = document.createElement("h5")
     PAF.classList.add("pe-2")
+    const TRASH = document.createElement("button")
+
     HEADF.innerText = `${title}`
     PAF.innerText = `${price}`
+    TRASH.classList.add("btn")
+    TRASH.setAttribute("onclick", "trash()")
+    const I = document.createElement("i")
+    I.className = "fa-solid fa-trash"
+    TRASH.appendChild(I)
+
     
+    LI.appendChild(TRASH)
     LI.appendChild(HEADF)
     LI.appendChild(PAF)
     UL.appendChild(LI) 
@@ -119,6 +128,12 @@ function toBuy(title, price) {
     
     */
 }
+
+function trash() {
+ const UL = document.querySelector('ul')
+ UL.remove()
+}
+
 
 
 
